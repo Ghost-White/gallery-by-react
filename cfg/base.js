@@ -14,13 +14,14 @@ module.exports = {
   port: defaultSettings.port,
   debug: true,
   devtool: 'eval',
-  output: {
+  output: {           //压缩和编译后文件输出路径
     path: path.join(__dirname, '/../dist/assets'),
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
-  devServer: {
+  devServer: {    //使用webpack构建本地服务器,组件为 webpack-dev-server
     contentBase: './src/',
+   // contentBase:'./dist/',
     historyApiFallback: true,
     hot: true,
     port: defaultSettings.port,
